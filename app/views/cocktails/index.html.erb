@@ -1,0 +1,19 @@
+<%= link_to 'New Cocktail', new_cocktail_path, class: "btn btn-primary" %>
+<%= link_to 'New Dose', new_cocktail_dose_path(@cocktails.last), class: "btn btn-primary" %>
+
+<h1>Cocktails List</h1>
+
+  <% @cocktails.each do |cocktail| %>
+      <%= cocktail.name %>
+      <br>
+    <ul>
+      <% cocktail.ingredients.each do |ingre| %>
+        <li>
+          <%= ingre.name %>
+          <br>
+        </li>
+      <% end %>
+      <%= link_to "Show", cocktail_path(cocktail) %>
+    </ul>
+  <% end %>
+
