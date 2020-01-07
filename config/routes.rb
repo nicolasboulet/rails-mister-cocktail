@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+
+  resources :ingredients, only: %i[index new]
+  # get 'ingredients', to: 'ingredients#index'
+  # get 'ingredients/new', to: 'ingredients#new'
+
   get 'doses/new'
   # Ingredients Routes
-  get 'ingredients', to: 'ingredients#index'
-  get 'ingredients/new', to: 'ingredients#new'
   # get 'ingredients/:id/edit', to: 'ingredients#edit'
   # post 'ingredients', to: 'ingredients#create'
   # patch 'ingredients', to: 'ingredients#update'
