@@ -2,7 +2,7 @@
 
 <%= simple_form_for @dose, url: cocktail_doses_path do |f| %>
   <%= f.input :description %>
-  <%= f.association :cocktail %>
-  <%= f.association :ingredient %>
+  <%= f.association :cocktail, input_html: { class: 'select2' } %>
+  <%= f.association :ingredient, input_html: { class: 'select2' } %>
   <%= f.button :submit %>
 <% end %>
