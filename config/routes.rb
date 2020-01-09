@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :ingredients, only: %i[index new]
+  resources :ingredients, only: %i[index new create]
   # get 'ingredients', to: 'ingredients#index'
   # get 'ingredients/new', to: 'ingredients#new'
 
